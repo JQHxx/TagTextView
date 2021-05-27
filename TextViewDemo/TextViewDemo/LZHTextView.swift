@@ -22,6 +22,7 @@ class LZHTextView: UIView, UITextViewDelegate {
         
         textV.backgroundColor = .white
         textV.returnKeyType = .done
+        textV.tintColor = UIColor.orange
         textV.font = UIFont.systemFont(ofSize: 14)
         textV.textColor = .black
         textV.delegate = self
@@ -63,8 +64,8 @@ class LZHTextView: UIView, UITextViewDelegate {
         //self.placeHolderLabel.isHidden = true // 隐藏
         if textView.text.isEmpty {
             let paragraphStyle = NSMutableParagraphStyle()
-                //paragraphStyle.lineSpacing = 3.0 //行间距
-            paragraphStyle.firstLineHeadIndent = 28 * 2.0; //首行缩进
+            paragraphStyle.lineSpacing = 3.0 //行间距
+            paragraphStyle.firstLineHeadIndent = 29 * 2.0; //首行缩进
             textView.attributedText = NSAttributedString.init(string: " ", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)])
             textView.text = ""
         }
@@ -79,8 +80,8 @@ class LZHTextView: UIView, UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         if !textView.text.isEmpty {
             let paragraphStyle = NSMutableParagraphStyle()
-                //paragraphStyle.lineSpacing = 3.0 //行间距
-            paragraphStyle.firstLineHeadIndent = 28 * 2.0; //首行缩进
+            paragraphStyle.lineSpacing = 3.0 //行间距
+            paragraphStyle.firstLineHeadIndent = 29 * 2.0; //首行缩进
             textView.attributedText = NSAttributedString.init(string: textView.text, attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)])
             //textView.selectedRange = NSRange.init(location: 0, length: 30)
         }
